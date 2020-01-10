@@ -1,0 +1,303 @@
+body,
+html {
+  height: 100%;
+}
+
+.navigation-bar {
+  height: 60px;
+  width: 100%;
+  text-align: right;
+  background-color: #f8f9fa;
+}
+
+.navigation-bar img {
+  height: 70%;
+  margin: 0 40px 0 0;
+}
+
+.helper-img {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.nav-p {
+  display: inline-block;
+  margin: 0 40px 0 0;
+  font-weight: bold;
+}
+
+.nav-p:hover {
+  cursor: pointer;
+  color: #f36f21;
+}
+
+.nav-button {
+  height: 70px;
+  transition: height 0.8s;
+  text-align: right;
+  margin: 0;
+  display: none;
+  background-color: #f8f9fa;
+}
+
+.nav-button img {
+  max-height: 35px;
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+}
+
+
+.nav-click-button {
+  display: none;
+  margin: 10px 25px 0 0;
+}
+
+.nav-but-img2 {
+  width: 100px;
+}
+
+.navigation-bar a {
+    color: black;
+}
+
+.heb-date {
+  margin: 0 0 0 50px;
+  /* display: inline-block; */
+  font-weight: bold;
+  color: lightblue;
+  float: left;
+  line-height: 3.5;
+}
+
+.nav-click-button a {
+  color: black;
+}
+
+.nav-click-button a:hover {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.make-contact:hover {
+  cursor: pointer;
+  color: lightblue;
+  }
+
+/* #################################### Navigation Bar Ends ####################################### */
+
+
+
+
+
+
+/* ######################################## Wrapping-report ################################# */
+.wrapping-report {
+  text-align: right;
+  height: auto;
+  padding: 100px 150px 0 0;
+}
+
+.knowing-p {
+  font-size: 25px;
+}
+
+.info-city-p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.general-p {
+  margin: 25px 0 0 0;
+  font-weight: bold;
+}
+
+.general-inp {
+  width: 70%;
+  padding-right: 20px;
+}
+
+
+.general-inp:focus {
+  outline: none !important;
+  border: 1.5px solid #f36f21;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+
+
+.general-tex {
+  width: 70%;
+  height: 100px;
+  padding: 10px 20px 0 0;
+  resize: none;
+}
+
+.general-tex:focus {
+  outline: none !important;
+  border: 1.5px solid #f36f21;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.send-report-but {
+  display: block;
+  margin: 3% 25% 0 0;
+}
+
+.send-report-but {
+  border-radius: 5%;
+  background-color: #f36f21;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 71, 102, .2);
+  font-weight: 500;
+}
+
+.send-report-but:hover {
+  opacity: 0.9;
+}
+ /* ######################################## Wrapping-report ################################# */
+
+
+
+
+
+
+/* Classes that turn the input border into red when their empties */
+.change-bord-col {
+  border: 1px solid red !important;
+}
+/* Classes that turn the input border into red when their empties */
+
+
+
+
+
+
+/*  ############################# CONTACT BAR ############################# */
+.contact-bar {
+  height: 60px;
+  width: 100%;
+  text-align: right;
+  background-color: #f8f9fa;
+  margin: 100px 0 0 0;
+}
+
+
+.contact-bar-p {
+  margin: 0 400px 0 100px;
+}
+
+.contact-p-all {
+ display: inline-block;
+ line-height: 3.5;
+}
+
+.contact-bar img {
+  height: 70%;
+  margin: 0 140px 0 0;
+}
+
+.email-address-p {
+ font-family: 'Courgette', cursive;
+}
+/* ############################# CONTACT BAR ############################# */
+
+
+
+
+ /* ################ MEDIA QUERY ON 1035 PX ################ */
+   @media only screen and (max-width: 1035px) {
+  .contact-bar-p {
+  margin: 0 100px 0 100px;
+}
+   }
+   /* ################ MEDIA QUERY ON 1035 PX ################ */
+
+
+
+
+
+
+ /* ################ MEDIA QUERY ON 715 PX ################ */
+  @media only screen and (max-width: 730px) {
+   
+.contact-bar {
+  text-align: center;
+}
+
+
+.contact-bar-p {
+  margin: 0 0 0 20px;
+}
+
+.contact-bar img {
+  margin: 0 20px 0 0;
+}
+  }
+ /* ################ MEDIA QUERY ON 715 PX ################ */
+ 
+ 
+ 
+ 
+ 
+ 
+   /* ################ MEDIA QUERY ON 515 PX ################ */
+@media only screen and (max-width: 515px) {
+  .heb-date {
+    margin: 0;
+  }
+
+  .wrapping-report {
+   padding: 0;
+   text-align: center;
+  }
+  
+  .send-report-but {
+    margin: 3% auto;
+  }
+}
+/* ################ MEDIA QUERY ON 515 PX ################ */
+ 
+ 
+ 
+ 
+ 
+ 
+   /* ################ MEDIA QUERY ON 440 PX ################ */
+  @media only screen and (max-width: 440px) {
+.contact-bar-p {
+display: none;
+}
+  }
+  /* ################ MEDIA QUERY ON 440 PX ################ */
+ 
+ 
+ 
+
+
+
+
+
+/* ################ MEDIA QUERY ON 405 PX ################ */
+@media only screen and (max-width: 405px) {
+  .navigation-bar {
+    display: none;
+  }
+
+  .nav-button {
+    display: block;
+  }
+
+  .heb-date {
+    line-height: 4.5;
+    margin-left: 30px;
+  }
+}
+/* ################ MEDIA QUERY ON 405 PX ################ */
+
+
+
+
+

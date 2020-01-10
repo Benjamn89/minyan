@@ -1,0 +1,366 @@
+ body,html {
+  height: 100%;
+}  
+
+.navigation-bar {
+  height: 60px;
+  width: 100%; 
+  text-align: right;
+  background-color: #f8f9fa;
+}
+
+.navigation-bar img {
+  height: 70%;
+  margin: 0 40px 0 0;
+}
+
+.helper-img {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.nav-p {
+  display: inline-block;
+  margin: 0 40px 0 0;
+  font-weight: bold;
+}
+
+.nav-p:hover {
+  cursor: pointer;
+  color: #f36f21;
+}
+
+.nav-button {
+  height: 70px;
+  transition: height 0.8s;
+  text-align: right;
+  margin: 0;
+  display: none;
+  background-color: #f8f9fa;
+}
+
+.nav-button img {
+  max-height: 35px;
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+}
+
+
+.nav-click-button {
+  display: none;
+  margin: 10px 25px 0 0;
+}
+
+.nav-but-img2 {
+  width: 100px;
+}
+
+.navigation-bar a {
+  color: black;
+}
+
+.nav-click-button a {
+  color: black;
+}
+
+.nav-click-button a:hover {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.make-contact:hover {
+cursor: pointer;
+color: lightblue;
+}
+
+.heb-date {
+  margin: 0 0 0 50px;
+  font-weight: bold;
+  color: lightblue;
+  float: left;
+  line-height: 3.5;
+}
+
+
+
+/* ################## Navigation Bar Ends ################## */
+.welcome-msg {
+  padding: 100px 150px 0 0;
+  text-align: right;
+}
+
+
+.welcome-span {
+  margin-right: 25px;
+  font-size: 50px;
+}
+
+.welcome-p {
+  display: inline-block;
+}
+/* ################## Finish Welcome MSG ################## */
+
+
+
+
+.start-div {
+  text-align: right;
+  padding: 30px 390px 0 0;
+  margin-bottom: 50px;
+}
+
+.start-div button {
+  border-radius: 5%;
+  background-color: #f36f21;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0,71,102,.2);
+  font-weight: 500;
+}
+
+.start-div button:hover {
+  opacity: 0.9;
+}
+/* ################# FINISH THE START SEARCH BUTTON ################# */
+
+
+
+
+.testing-div {
+  text-align: center;
+  transition: 1s;
+}
+
+ .testing-div2 {
+  height: 1px;
+  border: solid 0.5px;
+  width: 70%;
+  margin: auto;
+  transition: 1s;
+  overflow: hidden;
+  background-color: #f8f9fa;
+} 
+
+.while-click {
+height: 150px;
+}
+
+.p-div-general {
+  margin: 0;
+ font-weight: bold;
+}
+
+.err-msg {
+  margin-bottom: 20px;
+  color: red;
+  visibility: hidden;
+}
+
+.div-for-but {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.start-search-but {
+    border-radius: 5%;
+    background-color: #f36f21;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 71, 102, 1);
+    font-weight: 500;
+}
+/* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
+
+
+
+
+.wrapping-results {
+  width: 95%;
+  text-align: center;
+  margin-top: 20px;
+  transition: 1s;
+}
+
+.sam-sam {
+  border: solid 0.5px;
+  background-color: #f8f9fa;
+}
+
+.sam-sam p {
+  font-weight: bold;
+}
+/* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
+
+
+
+/*  ############################# CONTACT BAR ############################# */
+.contact-bar {
+  height: 60px;
+  width: 100%;
+  text-align: right;
+  background-color: #f8f9fa;
+  margin: 100px 0 0 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.contact-bar-scroll {
+position: relative;  
+}
+
+.contact-bar-p {
+  margin: 0 400px 0 100px;
+}
+
+.contact-p-all {
+ display: inline-block;
+ line-height: 3.5;
+}
+
+.contact-bar img {
+  height: 70%;
+  margin: 0 140px 0 0;
+}
+
+.email-address-p {
+ font-family: 'Courgette', cursive;
+}
+/* ############################# CONTACT BAR ############################# */
+
+
+
+
+
+
+ /* ################ MEDIA QUERY ON 1035 PX ################ */
+ @media only screen and (max-width: 1035px) {
+  .contact-bar-p {
+  margin: 0 100px 0 100px;
+}
+   }
+   /* ################ MEDIA QUERY ON 1035 PX ################ */
+
+
+
+
+
+
+/* ################ MEDIA QUERY ON 715 PX ################ */
+  @media only screen and (max-width: 730px) {
+   
+    .contact-bar {
+      text-align: center;
+    }
+    
+    
+    .contact-bar-p {
+      margin: 0 0 0 20px;
+    }
+    
+    .contact-bar img {
+      margin: 0 20px 0 0;
+    }
+      }
+  /* ################ MEDIA QUERY ON 715 PX ################ */
+
+
+
+
+
+/* ###################### MEDIA QUERY ON 635PX  ###################### */
+@media only screen and (max-width: 635px) {
+  .contact-bar {
+    position: relative;
+  }
+}
+/* ###################### MEDIA QUERY ON 635PX  ###################### */
+
+
+
+
+
+/* ###################### MEDIA QUERY ON 622PX  ###################### */
+@media only screen and (max-width: 622px) {
+  
+.start-div {
+  padding: 50px 0 0 0;
+  text-align: center;
+ }
+ 
+  .welcome-msg {
+  padding: 100px 0 0 0;
+  text-align: center;
+  }
+
+  .for-mar {
+    margin-top: 30px;
+  }
+}
+/* ###################### MEDIA QUERY ON 622PX  ###################### */
+
+
+
+
+
+
+
+/* ###################### MEDIA QUERY ON 595PX  ###################### */
+@media only screen and (max-width: 595px) {
+  .div-for-but {
+  text-align: center;
+}
+
+.while-click {
+ height: 405px;
+}
+ }
+/* ###################### MEDIA QUERY ON 595PX  ###################### */
+
+
+
+
+
+
+
+/* ###################### MEDIA QUERY ON 515PX  ###################### */
+@media only screen and (max-width: 515px) {
+  .heb-date {
+    margin: 0;
+  }
+}
+/* ###################### MEDIA QUERY ON 515PX  ###################### */
+
+
+
+
+
+   /* ################ MEDIA QUERY ON 440 PX ################ */
+   @media only screen and (max-width: 440px) {
+    .contact-bar-p {
+    display: none;
+    }
+      }
+  /* ################ MEDIA QUERY ON 440 PX ################ */
+
+
+
+
+
+/* ###################### MEDIA QUERY ON 405PX  ###################### */
+@media only screen and (max-width: 405px) {
+  .navigation-bar {
+    display: none;
+  }
+  .nav-button {
+    display: block;
+  }
+  
+  .heb-date {
+    line-height: 4.5;
+    margin-left: 30px;
+  }
+}
+/* ###################### MEDIA QUERY ON 405PX  ###################### */
