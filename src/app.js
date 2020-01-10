@@ -33,7 +33,6 @@ app.use(express.static(publicDir))
 // Fetch the mongoDB DATA
 app.get('/query', async (req, res) => {
   const pick = Object.keys(req.query)[0]
-  console.log(pick)
 
   MongoClient.connect(connectionURL, {useNewUrlParser: true}, (err, client) => {
      

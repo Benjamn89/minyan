@@ -62,7 +62,7 @@ document.querySelector('.button-click').addEventListener('click', toggle)
 
 
 /* Event Listener for the Search Button */
-var rullTest = () => {
+var rullTest = async () => {
 var checkValue3 =  $('#id_label_multiple3').select2('val')
 
 if (checkValue3.length < 1) {
@@ -77,59 +77,65 @@ if (document.querySelector('.sam-sam')) {
 
 
 if (checkValue3.length > 0) {
+
+
+  var myFetch = []
+  for (var i = 0; i < checkValue3.length; i++) {
+    await fetch('http://localhost:3000/query?' + checkValue3[i])
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      myFetch = [...myFetch, ...data]
+      return myFetch
+    })
+    .catch(err => {
+      console.log('Unable to fetch')
+    })
+  } // Completed the first looping
+
   
-  fetch('http://localhost:3000/query?' + checkValue3[0])
-  .then(response => {
-    return response.json()
-  })
-  .then(data => {
-    console.log(data)
-    for (var i = 0; i < data.length; i++) {
-
-        checkValue3.forEach((el) => {
-
-        if (data[i].street == el) {
+  for (var i = 0; i < myFetch.length; i++) {
 
 
-          document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='wrapping-results'>
-          <div class='row sam-sam'>
-          
-          <div class='col-sm'>
-          <p>אשדוד</p>
-          <p>רובע ${data[i].street}</p>
-          </div>
-          
-          
-          
-          <div class='col-sm'>
-          <p>שם רחוב/ בית כנסת</P>
-          <p>${data[i].name}</p>
-          </div>
-          
-          
-          
-          
-          <div class='col-sm'>
-          <p>שחרית: ${data[i].shahrit}</p>
-          <p>מנחה: ${data[i].minha}</p>
-          <p>ערבית: ${data[i].arvit}</p>
-          </div>
-          
-          
-          
-          </div>
-           </div>`)
-        }
-      })
-    }
-    contactBar(document.querySelectorAll('.wrapping-results').length)
-  })
-  .catch(err => {
-    console.log('Unable to fetch')
-  })
+    document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='wrapping-results'>
+    <div class='row sam-sam'>
+    
+    <div class='col-sm'>
+    <p>אשדוד</p>
+    <p>רובע ${myFetch[i].street}</p>
+    </div>
+    
+    
+    
+    <div class='col-sm'>
+    <p>שם רחוב/ בית כנסת</P>
+    <p>${myFetch[i].name}</p>
+    </div>
+    
+    
+    
+    
+    <div class='col-sm'>
+    <p>שחרית: ${myFetch[i].shahrit}</p>
+    <p>מנחה: ${myFetch[i].minha}</p>
+    <p>ערבית: ${myFetch[i].arvit}</p>
+    </div>
+    
+    
+    
+    </div>
+     </div>`)
 
 }
- }
+
+contactBar(document.querySelectorAll('.wrapping-results').length)
+
+
+
+
+} // Close of the if statemant
+ } // Closing of the rullTest function
  
  
  document.querySelector('.start-search-but').addEventListener('click', rullTest)
@@ -172,7 +178,7 @@ $('.make-contact').click(scrollFun)
 
   /* ################## Play with the contact nav bar position ################## */
 var contactBar = (e) => {
-  if (e >= 2) {
+  if (e >= 3) {
   document.querySelector('.contact-bar').classList.add('contact-bar-scroll')
   } else {
   document.querySelector('.contact-bar').classList.remove('contact-bar-scroll')
