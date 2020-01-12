@@ -9,7 +9,7 @@ const mongodb = require('mongodb')
 // All about mongoDB
 
   const MongoClient = mongodb.MongoClient
-  const connectionURL = 'mongodb://127.0.0.1:27017'
+  const connectionURL = 'mongodb+srv://benjamn:tannga11@minyan-0trd4.mongodb.net/test?retryWrites=true&w=majority'
   const databaseName = 'Minyan'
 
   MongoClient.connect(connectionURL, {useNewUrlParser: true}, (err, client) => {
@@ -45,6 +45,25 @@ app.get('/query', async (req, res) => {
     })
   })
 })
+// Fetch the mongoDB DATA
+
+
+// Insert Documents to MongoDB Server
+app.get('/insertMany', async (req, res) => {
+
+  MongoClient.connect(connectionURL, {useNewUrlParser: true}, (err, client) => {
+     
+    if (err) {
+        return console.log(err)
+    }
+    const db = client.db(databaseName)
+    db.collection('testing').insertMany([
+     // Insert code here
+    ])
+  })
+})
+// Insert Documents to MongoDB Server
+
 
 
 // Load the contact Page
