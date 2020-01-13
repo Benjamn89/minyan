@@ -82,7 +82,7 @@ if (checkValue3.length > 0) {
 
   var myFetch = []
   for (var i = 0; i < checkValue3.length; i++) {
-    await fetch('http://localhost:3000/query?' + checkValue3[i])
+    await fetch('/query?' + checkValue3[i])
     .then(response => {
       return response.json()
     })
