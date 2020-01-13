@@ -316,6 +316,9 @@ position: relative;
     .contact-bar img {
       margin: 0 20px 0 0;
     }
+    .squeeze-ellse {
+      display: none;
+    }
       }
   /* ################ MEDIA QUERY ON 715 PX ################ */
 
@@ -329,12 +332,10 @@ position: relative;
   .inner-div-two {
     margin: 0;
   }
- 
  .inner-resulet-div {
    width: 100%;
    margin-bottom: 50px;
   }
-  
  }
  /* ################  media for 650px  ################*/
 
