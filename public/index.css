@@ -173,26 +173,60 @@ height: 150px;
     font-weight: 500;
 }
 /* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
-
-
-
-
-.wrapping-results {
-  width: 95%;
+.resultes-wrapping-div {
+  text-align: right;
+  height: auto;
+  min-height: 100px;
+  width: 70%;
+  margin: 25px auto;
+  border: solid 0.5px #d3d3d3;
+  }
+  
+  .inner-resulet-div {
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: 2;
   text-align: center;
-  margin-top: 20px;
-  transition: 1s;
-}
+  }
 
-.sam-sam {
-  border: solid 0.5px;
-  background-color: #f8f9fa;
-}
-
-.sam-sam p {
-  font-weight: bold;
-}
+ .inner-p {
+ margin: 0;
+ line-height: 2;
+  }
 /* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
+
+
+
+
+/*  ############################# LOADING SPINNER ############################# */
+.wrapping-spinner {
+  text-align: center;
+  padding-right: 90px;
+  display: none;
+}
+
+
+.ellse {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #f36f21; /* Blue */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 1.1s linear infinite;
+  display: inline-block;
+  margin: 25px 0 0 28%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/*  ############################# LOADING SPINNER ############################# */
+
+
 
 
 
@@ -235,6 +269,25 @@ position: relative;
 
 
 
+/* ################  media for 1200px  ################*/
+@media only screen and (max-width: 1200px) {
+
+  .inner-resulet-div {
+    width: 48%;
+    text-align: center;
+   }
+   
+   .inner-div-two {
+     margin-bottom: 50px;
+   }
+  }
+  /* ################  media for 1200px  ################*/
+
+
+
+
+
+
  /* ################ MEDIA QUERY ON 1035 PX ################ */
  @media only screen and (max-width: 1035px) {
   .contact-bar-p {
@@ -265,6 +318,26 @@ position: relative;
     }
       }
   /* ################ MEDIA QUERY ON 715 PX ################ */
+
+
+
+
+
+/* ################  media for 650px  ################*/
+@media only screen and (max-width: 650px) {
+
+  .inner-div-two {
+    margin: 0;
+  }
+ 
+ .inner-resulet-div {
+   width: 100%;
+   margin-bottom: 50px;
+  }
+  
+ }
+ /* ################  media for 650px  ################*/
+
 
 
 
