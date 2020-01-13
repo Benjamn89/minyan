@@ -81,10 +81,13 @@ color: lightblue;
   float: left;
   line-height: 3.5;
 }
-
-
-
 /* ################## Navigation Bar Ends ################## */
+
+
+
+
+
+/* ##################  Welcome MSG ################## */
 .welcome-msg {
   padding: 100px 150px 0 0;
   text-align: right;
@@ -99,11 +102,13 @@ color: lightblue;
 .welcome-p {
   display: inline-block;
 }
-/* ################## Finish Welcome MSG ################## */
+/* ##################  Welcome MSG ################## */
 
 
 
 
+
+/* #################  THE START SEARCH BUTTON ################# */
 .start-div {
   text-align: right;
   padding: 30px 390px 0 0;
@@ -123,7 +128,7 @@ color: lightblue;
 .start-div button:hover {
   opacity: 0.9;
 }
-/* ################# FINISH THE START SEARCH BUTTON ################# */
+/* #################  THE START SEARCH BUTTON ################# */
 
 
 
@@ -172,7 +177,7 @@ height: 150px;
     box-shadow: 0 5px 10px 0 rgba(0, 71, 102, 1);
     font-weight: 500;
 }
-/* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
+/* ############################# THE RESULTS ############################# */
 .resultes-wrapping-div {
   text-align: right;
   height: auto;
@@ -196,7 +201,7 @@ height: 150px;
  margin: 0;
  line-height: 2;
   }
-/* FINISH WITH THE SELECT 2 DIVS AND START THE WITH THE RESULTS */
+/* ############################# THE RESULTS ############################# */
 
 
 
