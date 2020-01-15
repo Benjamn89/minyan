@@ -233,6 +233,16 @@ height: 150px;
 
 
 
+/* ############################# NOT FOUND RESULTES ############################# */
+.not-found {
+  text-align: right;
+  margin: 50px 330px 0 0;
+  display: none;
+}
+/* ############################# NOT FOUND RESULTES ############################# */
+
+
+
 
 
 /*  ############################# CONTACT BAR ############################# */
@@ -323,6 +333,10 @@ position: relative;
     }
     .squeeze-ellse {
       display: none;
+    }
+    .not-found {
+      margin: 50px 0;
+      text-align: center;
     }
       }
   /* ################ MEDIA QUERY ON 715 PX ################ */

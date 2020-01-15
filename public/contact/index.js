@@ -47,13 +47,19 @@ $(document).ready(function() {
 var inputs = document.querySelectorAll('.general-all')
 
 var sendReport = (e) => {
-
+  var counter = 0;
+  
   for (i = 0; i < inputs.length; i++) {
     if (inputs[i].value.length > 0) {
-      console.log('do some')
+      counter++
     } else {
       inputs[i].classList.add('change-bord-col')
     }
+  }
+  if (counter === inputs.length) {
+  document.querySelector('.send-report-but').textContent = 'שולח מסמך'
+  loadSpinner()
+  sendEmail()
   }
 }
 
@@ -72,8 +78,12 @@ document.querySelector('.send-report-but').addEventListener('click', sendReport)
 var removeBorder = (e) => {
   if (e.target.classList.contains('change-bord-col')) {
     e.target.classList.remove('change-bord-col')
-    console.log('Was Removed!')
+    console.log('Border removed!')
   }
+   if (document.querySelector('.send-report-but').textContent !== 'שלח מסמך') {
+   document.querySelector('.send-report-but').textContent = 'שלח מסמך'
+   document.querySelector('.vi-img').style.opacity = '0'
+   }
 }
 
 for (var i = 0; i < inputs.length; i++) {
@@ -94,6 +104,31 @@ var scrollFun = () => {
 $('.p-contact').click(scrollFun)
 $('.make-contact').click(scrollFun)
 /* Scrolling to the Contact Bar */
+
+
+
+/* Load the spinner after clicking on the send button
+ */
+var loadSpinner = () => {
+  document.querySelector('.send-report-but').insertAdjacentHTML('beforeend', `<i class="fa fa-spinner fa-spin spinner-but"></i>`)
+  }
+  /* Load the spinner after clicking on the send button
+  */
+
+
+
+
+  /* Send the report to the email when all the field is filled */
+var sendEmail = (e) => {
+  setTimeout(() => {
+  
+  $('.spinner-but').remove()
+  document.querySelector('.send-report-but').textContent = 'מסמך נשלח'
+  document.querySelector('.vi-img').style.opacity = '1'
+  $('.general-all').val('');
+  }, 1500)
+  }
+  /* Send the report to the email when all the field is filled */
 
 
 

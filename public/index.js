@@ -78,6 +78,7 @@ if ($('.resultes-wrapping-div')) {
 
 if (checkValue3.length > 0) {
  
+  document.querySelector('.not-found').style.display = 'none'
   document.querySelector('.wrapping-spinner').style.display = 'block'
 
   var myFetch = []
@@ -97,38 +98,42 @@ if (checkValue3.length > 0) {
    
 
   document.querySelector('.wrapping-spinner').style.display = 'none'
+
+  if (myFetch.length < 1) {
+    document.querySelector('.not-found').style.display = 'block'
+  } else {
+
+    for (var i = 0; i < myFetch.length; i++) {
+
+
+      document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='resultes-wrapping-div'>
+      <div class='inner-resulet-div inner-div-one'>
+        <p class='inner-p'>אזור</p>
+        <p class='inner-p'>רובע ${myFetch[i].street}</p>
+      </div>
+      <div class='inner-resulet-div inner-div-two'>
+      <p class='inner-p'>שם רחוב/ בית כנסת</P>
+      <p class='inner-p'>${myFetch[i].name}</p>
+       </div>
+      
+      
+      
+      <div class='inner-resulet-div inner-div-three'>
+        <p class='inner-p'>זמני תפילה</p>
+        <p class='inner-p'>שחרית: ${myFetch[i].shahrit}</p>
+        <p class='inner-p'>מנחה: ${myFetch[i].minha}</p>
+        <p class='inner-p'>ערבית: ${myFetch[i].arvit}</p>
+      </div>
+      <div class='inner-resulet-div inner-div-four'>
+        <p class='inner-p'>זמני תפילות בשבת</p>
+        <p class='inner-p'>אין</p>
+      </div>
+      
+      
+       </div>`)
+   }
+  }
   
-  for (var i = 0; i < myFetch.length; i++) {
-
-
-    document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='resultes-wrapping-div'>
-
-
-    <div class='inner-resulet-div inner-div-one'>
-      <p class='inner-p'>אזור</p>
-      <p class='inner-p'>רובע ${myFetch[i].street}</p>
-    </div>
-    <div class='inner-resulet-div inner-div-two'>
-    <p class='inner-p'>שם רחוב/ בית כנסת</P>
-    <p class='inner-p'>${myFetch[i].name}</p>
-     </div>
-    
-    
-    
-    <div class='inner-resulet-div inner-div-three'>
-      <p class='inner-p'>זמני תפילה</p>
-      <p class='inner-p'>שחרית: ${myFetch[i].shahrit}</p>
-      <p class='inner-p'>מנחה: ${myFetch[i].minha}</p>
-      <p class='inner-p'>ערבית: ${myFetch[i].arvit}</p>
-    </div>
-    <div class='inner-resulet-div inner-div-four'>
-      <p class='inner-p'>זמני תפילות בשבת</p>
-      <p class='inner-p'>אין</p>
-    </div>
-    
-    
-     </div>`)
-}
 
 contactBar(document.querySelectorAll('.resultes-wrapping-div').length)
 
@@ -186,10 +191,3 @@ var contactBar = (e) => {
   }
    }
   /* ################## Play with the contact nav bar position ################## */
-
-
-
-
-
-
-
