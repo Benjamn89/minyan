@@ -57,10 +57,31 @@ app.get('/insertMany', async (req, res) => {
         return console.log(err)
     }
     const db = client.db(databaseName)
-    db.collection('testing').insertMany([
-     // Insert code here
-    ])
+    db.collection('testing').insert([
+      {
+        "street" : "טו",
+        "shahrit" : "07:00 - 08:00",
+        "minha" : "13:15 - 13:35",
+        "arvit" : "17:15 - 17:30",
+        "name" : "היכל נפתלי",
+        "shabata": "0600 - 0700",
+        "shabatb": "1300- 1400",
+        "shabatc": "1700 - 1800"
+    },
+    
+    {
+        "street" : "טו",
+        "shahrit" : "07:00 - 08:00",
+        "minha" : "13:15 - 13:35",
+        "arvit" : "17:15 - 17:30",
+        "name" : "בבו שלום עליכם",
+        "shabata": "0600 - 0700",
+        "shabatb": "1300- 1400",
+        "shabatc": "1700 - 1800"
+    }
+  ])
   })
+  res.send('Insert Sucess')
 })
 // Insert Documents to MongoDB Server
 

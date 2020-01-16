@@ -222,7 +222,7 @@ height: 150px;
   height: 45px;
   animation: spin 1.1s linear infinite;
   display: inline-block;
-  margin: 25px 0 0 28%;
+  margin: 25px 0 0 10%;
 }
 
 @keyframes spin {
@@ -322,17 +322,11 @@ position: relative;
     .contact-bar {
       text-align: center;
     }
-    
-    
     .contact-bar-p {
       margin: 0 0 0 20px;
     }
-    
     .contact-bar img {
       margin: 0 20px 0 0;
-    }
-    .squeeze-ellse {
-      display: none;
     }
     .not-found {
       margin: 50px 0;
@@ -422,6 +416,9 @@ position: relative;
 @media only screen and (max-width: 515px) {
   .heb-date {
     margin: 0;
+  }
+  .wrapping-spinner {
+    padding-right: 0;
   }
 }
 /* ###################### MEDIA QUERY ON 515PX  ###################### */

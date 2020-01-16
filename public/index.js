@@ -104,7 +104,15 @@ if (checkValue3.length > 0) {
   } else {
 
     for (var i = 0; i < myFetch.length; i++) {
+      var shabatTime;
 
+      if (myFetch[i].shabat === 'אין') {
+        shabatTime = 'אין'
+      } else {
+        shabatTime = `<p class='inner-p'>${myFetch[i].shabata}</p>
+        <p class='inner-p'>${myFetch[i].shabatb}</p>
+        <p class='inner-p'>${myFetch[i].shabatc}</p>`
+      }
 
       document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='resultes-wrapping-div'>
       <div class='inner-resulet-div inner-div-one'>
@@ -126,10 +134,8 @@ if (checkValue3.length > 0) {
       </div>
       <div class='inner-resulet-div inner-div-four'>
         <p class='inner-p'>זמני תפילות בשבת</p>
-        <p class='inner-p'>אין</p>
+        <p class='inner-p'>${shabatTime}</p>
       </div>
-      
-      
        </div>`)
    }
   }
