@@ -208,9 +208,11 @@ height: 150px;
 
 /*  ############################# LOADING SPINNER ############################# */
 .wrapping-spinner {
+  width: 70%;
   text-align: center;
   padding-right: 90px;
   display: none;
+  margin: auto;
 }
 
 
@@ -418,7 +420,11 @@ position: relative;
     margin: 0;
   }
   .wrapping-spinner {
-    padding-right: 0;
+    padding: 0;
+  }
+
+  .ellse {
+    margin: 25px 0;
   }
 }
 /* ###################### MEDIA QUERY ON 515PX  ###################### */

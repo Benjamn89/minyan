@@ -104,11 +104,9 @@ if (checkValue3.length > 0) {
   } else {
 
     for (var i = 0; i < myFetch.length; i++) {
-      var shabatTime;
+      var shabatTime = 'אין';
 
-      if (myFetch[i].shabat === 'אין') {
-        shabatTime = 'אין'
-      } else {
+      if (myFetch[i].shabat === 'יש') {
         shabatTime = `<p class='inner-p'>${myFetch[i].shabata}</p>
         <p class='inner-p'>${myFetch[i].shabatb}</p>
         <p class='inner-p'>${myFetch[i].shabatc}</p>`
