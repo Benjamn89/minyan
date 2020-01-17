@@ -104,35 +104,75 @@ if (checkValue3.length > 0) {
   } else {
 
     for (var i = 0; i < myFetch.length; i++) {
-      var shabatTime = 'אין';
+         
+      var shabat, shabatshaa, shabatshab, shabatshac, shabatmina, shabatminb, shabatarv;
+      shabat = shabatshaa = shabatshab = shabatshac = shabatmina = shabatminb = shabatarv = ''
 
-      if (myFetch[i].shabat === 'יש') {
-        shabatTime = `<p class='inner-p'>${myFetch[i].shabata}</p>
-        <p class='inner-p'>${myFetch[i].shabatb}</p>
-        <p class='inner-p'>${myFetch[i].shabatc}</p>`
-      }
+      if (myFetch[i].shabat) {
+        shabatshaa = `<p class='inner-p'><strong>שחרית א:</strong> ${myFetch[i].shabatshaa}`
+        shabatmina = `<p class='inner-p'><strong>מנחה א:</strong> ${myFetch[i].shabatmina}`
+        shabatarv = `<p class='inner-p'><strong>ערבית:</strong> ${myFetch[i].shabatarv}`
+        shabat = ''} else {shabat = `<p class='inner-p'>אין</p>`}
+
+     if (myFetch[i].shabatshab) {
+       shabatshab = `<p class='inner-p'><strong>שחרית ב:</strong> ${myFetch[i].shabatshab}`
+     }
+     if (myFetch[i].shabatshac) {
+      shabatshac = `<p class='inner-p'><strong>שחרית ג:</strong> ${myFetch[i].shabatshac}`
+    }
+    if (myFetch[i].shabatminb) {
+      shabatminb = `<p class='inner-p'><strong>מנחה ב:</strong> ${myFetch[i].shabatminb}`
+    }
+
+
+      var areaName = `<p class='inner-p'>רובע ${myFetch[i].street}</p>`
+      var syngogoName = `<p class='inner-p'>רובע ${myFetch[i].name}</p>`
+      var shahrita = `<p class='inner-p'><strong>שחרית א:</strong> ${myFetch[i].shahrita}</p>`
+      if (myFetch[i].shahritb) {
+        var shahritb = `<p class='inner-p'><strong>שחרית ב:</strong> ${myFetch[i].shahrita}</p>`
+      } else {var shahritb = ''}
+      if (myFetch[i].shahritc) {
+        var shahritb = `<p class='inner-p'><strong>שחרית ג:</strong> ${myFetch[i].shahritc}</p>`
+      } else {var shahritc = ''}
+      var minhaa = `<p class='inner-p'><strong>מנחה א:</strong> ${myFetch[i].minhaa}</p>`
+      if (myFetch[i].minhab) {
+        var minhab = `<p class='inner-p'><strong>מנחה ב:</strong> ${myFetch[i].minhab}</p>`
+      } else {var minhab = ''}
+      var arvita = `<p class='inner-p'><strong>ערבית א:</strong> ${myFetch[i].arvita}</p>`
+      if (myFetch[i].arvitb) {
+        var minhab = `<p class='inner-p'><strong>ערבית ב:</strong> ${myFetch[i].arvitb}</p>`
+      } else {var arvitb = ''}
+
+
 
       document.querySelector('.testing-div').insertAdjacentHTML('afterend', `<div class='resultes-wrapping-div'>
       <div class='inner-resulet-div inner-div-one'>
-        <p class='inner-p'>אזור</p>
-        <p class='inner-p'>רובע ${myFetch[i].street}</p>
+        <p class='inner-p-head'>אזור</p>
+        ${areaName}
       </div>
       <div class='inner-resulet-div inner-div-two'>
-      <p class='inner-p'>שם רחוב/ בית כנסת</P>
-      <p class='inner-p'>${myFetch[i].name}</p>
+      <p class='inner-p-head'>שם רחוב/ בית כנסת</P>
+      ${syngogoName}
        </div>
-      
-      
-      
       <div class='inner-resulet-div inner-div-three'>
-        <p class='inner-p'>זמני תפילה</p>
-        <p class='inner-p'>שחרית: ${myFetch[i].shahrit}</p>
-        <p class='inner-p'>מנחה: ${myFetch[i].minha}</p>
-        <p class='inner-p'>ערבית: ${myFetch[i].arvit}</p>
+        <p class='inner-p-head'>זמני תפילה</p>
+        ${shahrita}
+        ${shahritb}
+        ${shahritc}
+        ${minhaa}
+        ${minhab}
+        ${arvita}
+        ${arvitb}
       </div>
       <div class='inner-resulet-div inner-div-four'>
-        <p class='inner-p'>זמני תפילות בשבת</p>
-        <p class='inner-p'>${shabatTime}</p>
+        <p class='inner-p-head'>זמני תפילות בשבת</p>
+        ${shabat}
+        ${shabatshaa}
+        ${shabatshab}
+        ${shabatshac}
+        ${shabatmina}
+        ${shabatminb}
+        ${shabatarv}
       </div>
        </div>`)
    }
