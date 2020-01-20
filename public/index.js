@@ -128,19 +128,25 @@ if (checkValue3.length > 0) {
       var areaName = `<p class='inner-p'>רובע ${myFetch[i].street}</p>`
       var syngogoName = `<p class='inner-p'>רובע ${myFetch[i].name}</p>`
       var shahrita = `<p class='inner-p'><strong>שחרית א:</strong> ${myFetch[i].shahrita}</p>`
+      
       if (myFetch[i].shahritb) {
-        var shahritb = `<p class='inner-p'><strong>שחרית ב:</strong> ${myFetch[i].shahrita}</p>`
+        var shahritb = `<p class='inner-p'><strong>שחרית ב:</strong> ${myFetch[i].shahritb}</p>`
       } else {var shahritb = ''}
+
       if (myFetch[i].shahritc) {
-        var shahritb = `<p class='inner-p'><strong>שחרית ג:</strong> ${myFetch[i].shahritc}</p>`
+        var shahritc = `<p class='inner-p'><strong>שחרית ג:</strong> ${myFetch[i].shahritc}</p>`
       } else {var shahritc = ''}
+
       var minhaa = `<p class='inner-p'><strong>מנחה א:</strong> ${myFetch[i].minhaa}</p>`
+
       if (myFetch[i].minhab) {
         var minhab = `<p class='inner-p'><strong>מנחה ב:</strong> ${myFetch[i].minhab}</p>`
       } else {var minhab = ''}
+
       var arvita = `<p class='inner-p'><strong>ערבית א:</strong> ${myFetch[i].arvita}</p>`
+
       if (myFetch[i].arvitb) {
-        var minhab = `<p class='inner-p'><strong>ערבית ב:</strong> ${myFetch[i].arvitb}</p>`
+        var arvitb = `<p class='inner-p'><strong>ערבית ב:</strong> ${myFetch[i].arvitb}</p>`
       } else {var arvitb = ''}
 
 
