@@ -126,9 +126,9 @@ if (checkValue3.length > 0) {
 
 
       var areaName = `<p class='inner-p'>רובע ${myFetch[i].street}</p>`
-      var syngogoName = `<p class='inner-p'>רובע ${myFetch[i].name}</p>`
+      var syngogoName = `<p class='inner-p'>${myFetch[i].name}</p>`
       var shahrita = `<p class='inner-p'><strong>שחרית א:</strong> ${myFetch[i].shahrita}</p>`
-      
+
       if (myFetch[i].shahritb) {
         var shahritb = `<p class='inner-p'><strong>שחרית ב:</strong> ${myFetch[i].shahritb}</p>`
       } else {var shahritb = ''}
