@@ -241,3 +241,14 @@ var contactBar = (e) => {
   }
    }
   /* ################## Play with the contact nav bar position ################## */
+
+
+
+  /* ################## FUNCTION TO FADE OUT THE PAGE ################## */
+  var fadeInPage = () => {
+  document.querySelector('#fader').classList.add('fade-in')
+  }
+  $('.img-click').click(fadeInPage)
+  $('.nav-p').click(fadeInPage)
+  $('.report-us').click(fadeInPage)
+/* ################## FUNCTION TO FADE OUT THE PAGE ################## */

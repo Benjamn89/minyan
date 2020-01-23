@@ -131,7 +131,16 @@ var sendEmail = (e) => {
   /* Send the report to the email when all the field is filled */
 
 
+  
 
+    /* ################## FUNCTION TO FADE OUT THE PAGE ################## */
+    var fadeInPage = () => {
+      document.querySelector('#fader').classList.add('fade-in')
+      }
+      $('.img-click').click(fadeInPage)
+      $('.nav-p').click(fadeInPage)
+      $('.report-us').click(fadeInPage)
+    /* ################## FUNCTION TO FADE OUT THE PAGE ################## */
 
 
 
