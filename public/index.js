@@ -249,6 +249,6 @@ var contactBar = (e) => {
   document.querySelector('#fader').classList.add('fade-in')
   }
   $('.img-click').click(fadeInPage)
-  $('.nav-p').click(fadeInPage)
+  $('.p-click').click(fadeInPage)
   $('.report-us').click(fadeInPage)
 /* ################## FUNCTION TO FADE OUT THE PAGE ################## */
