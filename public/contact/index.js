@@ -120,6 +120,9 @@ var loadSpinner = () => {
 
   /* Send the report to the email when all the field is filled */
 var sendEmail = (e) => {
+
+  document.querySelector('.command').submit();
+
   setTimeout(() => {
   
   $('.spinner-but').remove()

@@ -169,12 +169,6 @@ html {
   border: 1.5px solid #f36f21;
   box-shadow: 0 0 10px #719ECE;
 }
-
-.send-report-but {
-  display: block;
-  margin: 3% 25% 0 0;
-}
-
 .send-report-but {
   border-radius: 5%;
   background-color: #f36f21;
@@ -184,6 +178,8 @@ html {
   box-shadow: 0 5px 10px 0 rgba(0, 71, 102, .2);
   font-weight: 500;
   display: inline-block;
+  cursor: pointer;
+  margin: 3% 25% 0 0;
 }
 
 .send-report-but:hover {

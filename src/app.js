@@ -3,7 +3,14 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 const mongodb = require('mongodb')
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
+require('dotenv').config()
 
+
+// parse application
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 
 // All about mongoDB
@@ -95,6 +102,55 @@ app.get('/contact', async (req, res) => {
     res.status(400).send(e)
   }
 })
+
+
+app.post('/send-email', (req, res) => {
+
+  const theMsg = `<h1>Bellow will be the message</h1>
+  <p>${req.body.contact}</p>
+  <p>${req.body.street}</p>
+  <p>${req.body.preytimes}</p>
+  <p>${req.body.shabat}</p>
+  <p>${req.body.information}</p>
+
+  <h1>End of the message</h1>
+  `
+ 
+  const nodemailer = require("nodemailer");
+  
+  // async..await is not allowed in global scope, must use a wrapper
+  async function main() {
+    // Generate test SMTP service account from ethereal.email
+    // Only needed if you don't have a real mail account for testing
+    let testAccount = await nodemailer.createTestAccount();
+  
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: process.env.EMAIL, // generated ethereal user
+        pass: process.env.PASSWORD // generated ethereal password
+      }
+    });
+  
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: '"Benny Tal 👻" <newbennytal@gmail.com>', // sender address
+      to: "newbennytal@gmail.com", // list of receivers
+      subject: "Testing nodemailer ✔", // Subject line
+      text: "Test - plain text", // plain text body
+      html: theMsg // html body
+    });
+  
+    console.log('Message sent');
+  }
+  
+  main().catch(console.error);
+
+res.status(204).send()
+
+})
+
 
 
 app.listen(port, () => console.log('express - ON'))
