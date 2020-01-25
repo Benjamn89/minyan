@@ -104,7 +104,7 @@ app.get('/contact', async (req, res) => {
 })
 
 
-app.post('/send-email', (req, res) => {
+app.post('/send-email', async (req, res) => {
 
   const theMsg = `<h1>Bellow will be the message</h1>
   <p>${req.body.contact}</p>
