@@ -143,11 +143,10 @@ app.post('/send-email', (req, res) => {
     });
   
     console.log('Message sent');
+    res.status(204).send()
   }
   
   main().catch(console.error);
-
-res.status(204).send()
 
 })
 
