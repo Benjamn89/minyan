@@ -112,7 +112,6 @@ app.post('/send-email', async (req, res) => {
   <p>${req.body.preytimes}</p>
   <p>${req.body.shabat}</p>
   <p>${req.body.information}</p>
-
   <h1>End of the message</h1>
   `
  
